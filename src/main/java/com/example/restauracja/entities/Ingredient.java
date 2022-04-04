@@ -1,6 +1,5 @@
 package com.example.restauracja.entities;
 
-
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -8,29 +7,26 @@ import lombok.NoArgsConstructor;
 import javax.persistence.*;
 import java.util.List;
 
+@Entity
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Entity
-public class Dish {
+public class Ingredient {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private Long id;
     private String name;
-    private Integer price;
-    private Integer points;
-
-    @Enumerated(EnumType.STRING)
-    private DishTYpe dishTYpe;
+    private Integer calories;
+    private Integer weight;
+    private String category;
+    private String type;
 
     @ManyToMany(fetch = FetchType.LAZY)
-    @JoinTable(name = "orders_dishes",
-    joinColumns = {@JoinColumn(name = "order_id")},
+    @JoinTable(name = "ingredients_dishes",
+    joinColumns = {@JoinColumn(name = "ingredient_id")},
     inverseJoinColumns = {@JoinColumn(name = "dish_id")})
-    private List<Order> ordersList;
+    private List<Dish> dishes;
 
-    @ManyToMany(fetch = FetchType.LAZY, mappedBy = "dishes")
-    private List<Ingredient> ingredients;
 }

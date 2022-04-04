@@ -24,9 +24,9 @@ public class Employee {
     @Column(unique = true)
     private String email;
 
-    //@OneToOne
-    //@JoinColumn(name = "client_id", referencedColumnName = "client_id")
-
+   // @OneToOne
+   // @JoinColumn(name = "client_id", referencedColumnName = "client_id")
+   // private Client client;
 }
 
 //{

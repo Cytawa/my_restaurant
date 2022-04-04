@@ -26,4 +26,7 @@ public class Client {
 
     @OneToOne
     Order order;
+
+    @OneToOne
+    Employee employee;
 }
