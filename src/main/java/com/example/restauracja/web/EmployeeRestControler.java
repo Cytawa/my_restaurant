@@ -1,5 +1,6 @@
 package com.example.restauracja.web;
 
+import com.example.restauracja.entities.Employee;
 import com.example.restauracja.service.EmployeeService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;

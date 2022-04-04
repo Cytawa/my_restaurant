@@ -1,4 +1,4 @@
-package com.example.restauracja.web;
+package com.example.restauracja.entities;
 
 
 import lombok.AllArgsConstructor;
@@ -25,9 +25,9 @@ public class Employee {
     @Column(unique = true)
     private String email;
 
-    @OneToOne
+    //@OneToOne
     //@JoinColumn(name = "client_id", referencedColumnName = "client_id")
-    private Client client;
+
 }
 
 //{
