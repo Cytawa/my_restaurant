@@ -11,7 +11,7 @@ import java.util.List;
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("/restaurant/employee")
-public class EmployeeRestControler {
+public class EmployeeController {
 
     private final EmployeeService employeeService;
 
